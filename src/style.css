@@ -1,5 +1,75 @@
-@import "bootstrap/dist/css/bootstrap.min.css";
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
 
 body{
-    background: white;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: top;
+    transition: background 0.5 ease;
+    overflow: hidden;
+    background-color: #f0f0f0;
 }
+.container {
+    text-align: center;
+    padding: 25px;
+    max-width: 600 px;
+}
+h1 {
+    font-size: 5em;
+    color: black;
+    margin-bottom: 0.2em;
+    text-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    animation: emojiBounce 2s infinite;
+}
+@keyframes emojiBounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-20px);
+    }
+}
+#excusa {
+    font-size: 2em;
+    margin: 20px 0;
+    color: black;
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease;
+}
+
+#emoji {
+    font-size: 5em;
+    margin: 20px 0;
+    transition: transform 0.3s ease;
+}
+button {
+    padding: 15px 30px;
+    font-size: 1.5em;
+    border: none;
+    border-radius: 10px;
+    background-color: #4CAF50;
+    color: white;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+button:hover {
+    background-color: lightcoral;
+    transform: scale(1.05);
+}
+button:active {
+    transform: scale(0.95);
+}
+.fixed-bottom {
+    position:absolute;
+    bottom: 0;
+    width: 100%;
+    text-align: left;
+    justify-content: center;
+    background-color: rgba(255, 255, 255, 0.8);
+    font-size: 1em; 
+}   
